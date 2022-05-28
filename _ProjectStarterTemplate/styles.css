@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", "sans-serif"; /* Sets the font of the project. */
+  margin: 0; /* Sets 0 margin on all 4 sides. */
+  display: flex; /* Display tags in a single row (default) or column based on flex-direction. */
+  flex-direction: column; /* Display tags in a single column. */
+  align-items: center; /* If flex-direction is column, align-items will align all items horizontally. */
+  justify-content: center; /* To center the content inside the body vertically. */
+  height: 100vh; /* Height of the body. */
+  overflow: hidden; /* Do not show scrollbar by default. */
+}
+
+/*
+ * [display: flex, flex-direction: column, align-items: center] 
+ * Creates a flex box with items aligned in center and columnar manner.
+ *
+ * [display: flex, flex-direction: row, align-items: center] 
+ * Creates a flex box with items aligned in center and row manner. 
+ */

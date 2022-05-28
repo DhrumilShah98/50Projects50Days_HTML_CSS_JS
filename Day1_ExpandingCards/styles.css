@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+:root {
+  --white: #ffffff;
+  --lightslategray: #778899;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Muli", "sans-serif"; /* Sets the font of the project. */
+  margin: 0; /* Sets 0 margin on all 4 sides. */
+  display: flex; /* Display tags in a single row (default) or column based on flex-direction. */
+  flex-direction: column; /* Display tags in a single column. */
+  align-items: center; /* If flex-direction is column, align-items will align all items horizontally. */
+  justify-content: center; /* To center the content inside the body vertically. */
+  height: 100vh; /* Height of the body. */
+  overflow: hidden; /* Do not show scrollbar by default. */
+}
+
+.background-image-1 {
+  background-image: url("https://images.unsplash.com/photo-1506064549099-34b18723e8c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+}
+
+.background-image-2 {
+  background-image: url("https://images.unsplash.com/photo-1504805526346-8d03d1ca73de?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+}
+
+.background-image-3 {
+  background-image: url("https://images.unsplash.com/photo-1506062600505-8db6c5800340?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+}
+
+.background-image-4 {
+  background-image: url("https://images.unsplash.com/photo-1621795307430-3ff25aa08945?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+}
+
+.background-image-5 {
+  background-image: url("https://images.unsplash.com/photo-1483356256511-b48749959172?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+}
+
+.container {
+  display: flex;
+  width: 80vw;
+}
+
+.panel {
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  margin: 10px;
+  flex: 0.5;
+  cursor: pointer;
+  position: relative;
+  color: var(--white);
+  border-radius: 50px;
+  transition: flex 0.7s ease-in;
+  box-shadow: 2px 2px 2px 2px var(--lightslategray);
+}
+
+.panel.active {
+  flex: 5;
+  box-shadow: 4px 4px 4px 4px var(--lightslategray);
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0px;
+  opacity: 0;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
+
+/*
+ * [display: flex, flex-direction: column, align-items: center] 
+ * Creates a flex box with items aligned in center and columnar manner.
+ *
+ * [display: flex, flex-direction: row, align-items: center] 
+ * Creates a flex box with items aligned in center and row manner. 
+ */
